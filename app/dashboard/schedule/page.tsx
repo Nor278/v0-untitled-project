@@ -67,13 +67,6 @@ export default function SchedulePage() {
                 <CardTitle>Schedule</CardTitle>
                 <CardDescription>Your medication schedule and reminders</CardDescription>
               </div>
-              <div>
-                <TabsList>
-                  <TabsTrigger value="day">Day</TabsTrigger>
-                  <TabsTrigger value="week">Week</TabsTrigger>
-                  <TabsTrigger value="month">Month</TabsTrigger>
-                </TabsList>
-              </div>
             </div>
             <div className="flex items-center justify-between mt-4">
               <div className="flex items-center space-x-2">
@@ -92,6 +85,11 @@ export default function SchedulePage() {
           </CardHeader>
           <CardContent>
             <Tabs value={view} onValueChange={(v) => setView(v as "day" | "week" | "month")}>
+              <TabsList className="mb-4">
+                <TabsTrigger value="day">Day</TabsTrigger>
+                <TabsTrigger value="week">Week</TabsTrigger>
+                <TabsTrigger value="month">Month</TabsTrigger>
+              </TabsList>
               <TabsContent value="day">
                 <UpcomingReminders />
               </TabsContent>
