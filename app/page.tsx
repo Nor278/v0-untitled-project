@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Pill, Calendar, Award, Share2, Bell, BarChart3 } from "lucide-react"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
+import TrustedBySection from "@/components/trusted-by-section"
 
 export default function Home() {
   return (
@@ -87,6 +88,9 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* Trusted By Section */}
+        <TrustedBySection />
 
         {/* How It Works Section */}
         <section className="bg-gray-50 py-20 px-4 md:px-6">
